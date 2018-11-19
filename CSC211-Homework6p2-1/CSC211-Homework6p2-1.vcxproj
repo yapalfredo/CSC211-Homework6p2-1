@@ -115,6 +115,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="MyStats.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="MyStats.cpp" />
+    <ClCompile Include="TestMyStats.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
