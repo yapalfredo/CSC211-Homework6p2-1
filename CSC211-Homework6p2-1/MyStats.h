@@ -3,6 +3,7 @@
 #include <iostream>
 #include <ctime>
 #include <iomanip>
+#include <fstream>
 
 using namespace std;
 
@@ -27,7 +28,7 @@ public:
 	void setTemp(int);
 
 	// ACCESSORS
-	int getArrStat(int, int);
+	int getArrStat(int, int) const;
 	int getTemp();
 
 	// WILL INITIALIZE THE VALUES OF THE ELEMENTS IN THE ARRAY
@@ -35,6 +36,7 @@ public:
 
 	// WILL PRINT THE INDIVIDUAL ELEMENTS IN THE ARRAY
 	void print();
+	void print(ofstream&) const;
 
 	// WILL CALCULATE FOR THE AVERAGE VALUE OF ALL ELEMENTS IN THE ARRAY
 	double average();

@@ -17,7 +17,7 @@ void MyStats::setArrStat(int row, int col, int val)
 	arrStat[row][col] = val;
 }
 
-int MyStats::getArrStat(int row, int col)
+int MyStats::getArrStat(int row, int col) const
 {
 	//returns an array value
 	int result;
@@ -65,6 +65,19 @@ void MyStats::print()
 			cout << setw(5) << getArrStat(row, col) << " ";
 		}
 		cout << endl;
+	}
+}
+
+void MyStats::print(ofstream& outFile) const
+{
+	//Prints the values in the array
+	for (int row = 0; row < rowSize; row++)
+	{
+		for (int col = 0; col < colSize; col++)
+		{
+			outFile << setw(5) << getArrStat(row, col) << " ";
+		}
+		outFile << endl;
 	}
 }
 
